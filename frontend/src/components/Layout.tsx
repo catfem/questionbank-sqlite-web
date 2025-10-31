@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import {
   HomeIcon,
@@ -84,7 +84,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </header>
           
           <main className="p-6">
-            <Outlet />
+            {children}
           </main>
         </div>
       </div>

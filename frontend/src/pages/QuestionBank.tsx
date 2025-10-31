@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from 'react-query'
 import {
-  PencilIcon,
   TrashIcon,
   PlusIcon,
   MagnifyingGlassIcon,
   FunnelIcon,
+  QuestionMarkCircleIcon,
 } from '@heroicons/react/24/outline'
 import axios from 'axios'
 
@@ -28,7 +28,6 @@ const QuestionBank: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterType, setFilterType] = useState('')
   const [filterDifficulty, setFilterDifficulty] = useState('')
-  const [editingQuestion, setEditingQuestion] = useState<Question | null>(null)
 
   const queryClient = useQueryClient()
 
@@ -178,7 +177,7 @@ const QuestionBank: React.FC = () => {
                         <div
                           key={option.id}
                           className={`flex items-center p-2 rounded ${
-                            question.correct_answer.includes(option.options?.findIndex(o => o.id === option.id) ?? -1)
+                            question.correct_answer.includes(option.id)
                               ? 'bg-green-50 border border-green-200'
                               : 'bg-gray-50 border border-gray-200'
                           }`}
@@ -202,12 +201,6 @@ const QuestionBank: React.FC = () => {
                   </div>
                   
                   <div className="ml-4 flex space-x-2">
-                    <button
-                      onClick={() => setEditingQuestion(question)}
-                      className="p-2 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-md"
-                    >
-                      <PencilIcon className="h-4 w-4" />
-                    </button>
                     <button
                       onClick={() => handleDelete(question.id)}
                       className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-md"

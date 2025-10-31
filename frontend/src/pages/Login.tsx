@@ -1,8 +1,6 @@
 import React from 'react'
-import { useAuth } from '../contexts/AuthContext'
 
 const Login: React.FC = () => {
-  const { login } = useAuth()
 
   const handleGoogleLogin = () => {
     // In a real app, you would use Google's GSI library
@@ -17,11 +15,6 @@ const Login: React.FC = () => {
     // For demo, we'll simulate the OAuth flow
     // In production, use the actual Google Sign-In button
     window.open(googleAuthUrl, '_blank', 'width=500,height=600')
-  }
-
-  // This would be called by the OAuth callback
-  const handleAuthCallback = (idToken: string) => {
-    login(idToken).catch(console.error)
   }
 
   return (

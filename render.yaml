@@ -1,0 +1,65 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: question-bank-db
+    env: docker
+    repo: https://github.com/render-examples/postgres
+    plan: free
+    envVars:
+      - key: POSTGRES_DB
+        value: question_bank
+      - key: POSTGRES_USER
+        value: question_bank_user
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+
+  # Backend API
+  - type: web
+    name: question-bank-api
+    env: docker
+    repo: https://github.com/your-username/question-bank-quiz-system
+    rootDir: backend
+    dockerfilePath: ./Dockerfile.prod
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: question-bank-db
+          property: connectionString
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: FRONTEND_URL
+        fromService:
+          type: web
+          name: question-bank-app
+          property: url
+      - key: PORT
+        value: 8000
+
+  # Frontend Application
+  - type: web
+    name: question-bank-app
+    env: static
+    repo: https://github.com/your-username/question-bank-quiz-system
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: question-bank-api
+          property: url
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://question-bank-api.onrender.com/api/*
+      - type: rewrite
+        source: /*
+        destination: /index.html
