@@ -1,0 +1,75 @@
+# Sample Questions for Upload
+
+This document contains sample questions in the supported formats that can be uploaded to the Question Bank system.
+
+## Single Choice Questions
+
+1. What is the capital of France? (A) London (B) Paris (C) Berlin (D) Madrid
+
+2. Which planet is known as the Red Planet? (A) Venus (B) Mars (C) Jupiter (D) Saturn
+
+3. Who painted the Mona Lisa? (A) Vincent van Gogh (B) Pablo Picasso (C) Leonardo da Vinci (D) Michelangelo
+
+4. What is the largest ocean on Earth? (A) Atlantic Ocean (B) Indian Ocean (C) Arctic Ocean (D) Pacific Ocean
+
+5. In which year did World War II end? (A) 1943 (B) 1944 (C) 1945 (D) 1946
+
+## Multiple Choice Questions
+
+6. Select all that are programming languages: (A) Python (B) HTML (C) Java (D) CSS
+
+7. Which of the following are mammals? (A) Dog (B) Whale (C) Shark (D) Bat
+
+8. Select all continents that start with the letter 'A': (A) Africa (B) Asia (C) America (D) Antarctica
+
+9. Which of the following are renewable energy sources? (A) Solar (B) Coal (C) Wind (D) Natural Gas
+
+10. Select all prime numbers from the list: (A) 2 (B) 4 (C) 7 (D) 9
+
+## True/False Questions
+
+11. The Earth is flat. (T/F)
+
+12. Water boils at 100 degrees Celsius at sea level. (T/F)
+
+13. The human body has 206 bones. (T/F)
+
+14. The Great Wall of China is visible from space with the naked eye. (T/F)
+
+15. Shakespeare wrote Romeo and Juliet. (T/F)
+
+## More Single Choice Questions
+
+16. What is the chemical symbol for gold? (A) Go (B) Gd (C) Au (D) Ag
+
+17. Which element has the atomic number 1? (A) Helium (B) Hydrogen (C) Lithium (D) Carbon
+
+18. What is the smallest prime number? (A) 0 (B) 1 (C) 2 (D) 3
+
+19. Who developed the theory of relativity? (A) Isaac Newton (B) Albert Einstein (C) Stephen Hawking (D) Galileo Galilei
+
+20. What is the currency of Japan? (A) Yuan (B) Won (C) Yen (D) Ringgit
+
+## Additional Multiple Choice Questions
+
+21. Select all countries that are part of the United Kingdom: (A) England (B) Ireland (C) Scotland (D) Wales
+
+22. Which of the following are types of cloud storage? (A) Google Drive (B) Dropbox (C) Microsoft OneDrive (D) Local Hard Drive
+
+23. Select all programming paradigms: (A) Object-oriented (B) Functional (C) Procedural (D) Database
+
+24. Which of the following are social media platforms? (A) Facebook (B) Twitter (C) Email (D) Instagram
+
+25. Select all mathematical operations: (A) Addition (B) Subtraction (C) Multiplication (D) Division
+
+## More True/False Questions
+
+26. The sum of angles in a triangle is always 180 degrees. (T/F)
+
+27. Light travels faster than sound. (T/F)
+
+28. Mount Everest is the tallest mountain in the world. (T/F)
+
+29. Humans have four chambers in their heart. (T/F)
+
+30. The Internet was invented in the 1990s. (T/F)
