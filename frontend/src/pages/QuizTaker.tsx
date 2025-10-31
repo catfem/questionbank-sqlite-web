@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from 'react-query'
 import axios from 'axios'
@@ -26,7 +26,6 @@ const QuizTaker: React.FC = () => {
   const navigate = useNavigate()
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number[]>>({})
-  const [quizStartTime] = useState(new Date())
 
   const { data: quiz } = useQuery<Quiz>(
     ['quiz', quizId],

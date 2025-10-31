@@ -1,9 +1,6 @@
 import React from 'react'
-import { useAuth } from '../contexts/AuthContext'
 
 const Login: React.FC = () => {
-  const { login } = useAuth()
-
   const handleGoogleLogin = () => {
     // In a real app, you would use Google's GSI library
     // For demo purposes, we'll show the OAuth flow
@@ -19,12 +16,7 @@ const Login: React.FC = () => {
     window.open(googleAuthUrl, '_blank', 'width=500,height=600')
   }
 
-  // This would be called by the OAuth callback
-  const handleAuthCallback = (idToken: string) => {
-    login(idToken).catch(console.error)
-  }
-
-  return (
+    return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
