@@ -1,0 +1,7 @@
+name = "question-bank-api"
+main = "src/simple-index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+GOOGLE_CLIENT_ID = "your-google-client-id"
+FRONTEND_URL = "https://question-bank-frontend.pages.dev"
