@@ -1,0 +1,12 @@
+name = "questionbank-api"
+main = "src/index.js"
+compatibility_date = "2023-12-01"
+
+[env.production]
+name = "questionbank-api"
+
+[[env.production.vars]]
+ENVIRONMENT = "production"
+
+[vars]
+ENVIRONMENT = "development"

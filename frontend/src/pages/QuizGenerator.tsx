@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useMutation, useQuery, useQueryClient } from 'react-query'
+import { useMutation, useQuery } from 'react-query'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -21,7 +21,6 @@ const QuizGenerator: React.FC = () => {
     count: 10,
   })
   const navigate = useNavigate()
-  const queryClient = useQueryClient()
 
   const { data: tags } = useQuery<Tag[]>('tags', () =>
     axios.get('/api/tags').then(res => res.data)
